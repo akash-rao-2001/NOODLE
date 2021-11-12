@@ -11,18 +11,42 @@ const firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 firebase.analytics();
 
+var alertPlaceholder = document.getElementById('liveAlertPlaceholder')
+var alertTrigger = document.getElementById('btn13')
+
+function alert(message, type) {
+    var wrapper = document.createElement('div')
+    wrapper.innerHTML = '<div class="alert alert-' + type + ' alert-dismissible" role="alert">' + message + '<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>'
+
+    alertPlaceholder.append(wrapper)
+}
+
+if (alertTrigger) {
+    alertTrigger.addEventListener('click', function () {
+        alert('Account Created Successfully!', 'info')
+        document.getElementById("btn13").disabled = true;
+    })
+
+}
+
+
 // let's code 
 var datab = firebase.database().ref('data');
 
 function UserRegister() {
-    var email = document.getElementById('eemail').value;
-    var password = document.getElementById('lpassword').value;
+    var email = document.getElementById('email').value;
+    var password = document.getElementById('password').value;
     firebase.auth().createUserWithEmailAndPassword(email, password).then(function () {
 
     }).catch(function (error) {
         var errorcode = error.code;
         var errormsg = error.message;
     });
+
+    //alert("Account Created!")
+
+
+
 }
 const auth = firebase.auth();
 

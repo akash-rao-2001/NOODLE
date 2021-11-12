@@ -13,6 +13,10 @@ app.get('', (req, res) => {
     res.render('index')
 })
 
+app.post('', (req, res) => {
+    res.render('index')
+})
+
 app.get('/signin', (req, res) => {
     res.render('signin')
 })

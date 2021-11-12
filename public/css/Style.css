@@ -16,7 +16,7 @@ body {
 
 .container {
     width: 500px;
-    height: 500px;
+    height: 530px;
     background-color: #fff;
     position: absolute;
     top: 150px;
@@ -80,6 +80,7 @@ body {
     font-size: 1rem;
     padding: 10px 0px;
     color: rgb(150, 148, 148);
+    margin-bottom: 0px;
 }
 
 .content p a {
@@ -91,7 +92,7 @@ body {
 }
 
 #form {
-    padding-top: 20px;
+    padding-top: 5px;
     /* padding-left: 80px; */
 }
 
@@ -101,21 +102,23 @@ body {
     font-weight: 700;
     padding: 10px 0px;
     color: #999c9a;
+    padding-bottom: 0px;
 }
 
 #form input {
     border: none;
     border-bottom: 3px solid #1FAB89;
     width: 350px;
-    margin: 10px 0px;
+    margin: 7px 0px;
     outline: none;
     font-size: 1rem;
     padding: 5px 0px;
     font-family: 'Comfortaa', cursive;
     font-weight: 800;
+    margin-top: 3px;
 }
 
-#btn {
+#btn13 {
     text-align: center;
     padding: 10px 60px;
     position: relative;
@@ -127,6 +130,7 @@ body {
     border-radius: 5px;
     font-size: 18px;
     font-family: 'Comfortaa', cursive;
+    margin-top: 10px;
 }
 
 #btn1 {
@@ -263,7 +267,7 @@ body {
         font-family: 'Comfortaa', cursive;
         font-weight: 800;
     }
-    #btn {
+    #btn13 {
         text-align: center;
         padding: 5px 20px;
         position: relative;
@@ -373,7 +377,7 @@ body {
         font-family: 'Comfortaa', cursive;
         font-weight: 800;
     }
-    #btn {
+    #btn13 {
         text-align: center;
         padding: 5px 20px;
         position: relative;
@@ -455,7 +459,7 @@ body {
         font-family: 'Comfortaa', cursive;
         font-weight: 800;
     }
-    #btn {
+    #btn13 {
         text-align: center;
         padding: 5px 20px;
         position: relative;
@@ -537,7 +541,7 @@ body {
         font-family: 'Comfortaa', cursive;
         font-weight: 800;
     }
-    #btn {
+    #btn13 {
         text-align: center;
         padding: 5px 20px;
         position: relative;
@@ -620,7 +624,7 @@ body {
         font-family: 'Comfortaa', cursive;
         font-weight: 800;
     }
-    #btn {
+    #btn13 {
         text-align: center;
         padding: 5px 20px;
         position: relative;
