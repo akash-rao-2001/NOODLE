@@ -1,5 +1,9 @@
 const express = require('express')
+const mongoose = require('mongoose')
 const app = express()
+
+
+mongoose.createConnection('mongodb://localhost/blog').asPromise();
 
 app.use(express.static('public'))
 app.use('/css', express.static(__dirname + 'public/css'))
@@ -32,7 +36,12 @@ app.get('/form', (req, res) => {
 
 
 app.get('/blog', (req, res) => {
-    res.render('blog')
+    const articles = [{
+        title: 'test',
+        createdAt: new Date(),
+        description: 'test d'
+    }]
+    res.render('blog', { articles: articles })
 })
 
 
