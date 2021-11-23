@@ -49,7 +49,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="index">Home</a>
+                        <a class="nav-link active" aria-current="page" href="home">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="about">About</a>
@@ -85,29 +85,20 @@
 
         <div class="container md:pt-24 px-6 mx-auto items-center">
 
+            <form action="/blog" method="post">
+                <label for="title"></label>
+                <input class="form-control form-control-lg border border-5 " type="text"
+                    placeholder="An Interesting Title" aria-label=".form-control-lg example" style="text-align: center;"
+                    name="title" id="title" required>
 
-            <input class="form-control form-control-lg border border-5 " type="text" placeholder="An Interesting Title"
-                aria-label=".form-control-lg example" style="text-align: center;">
-
-            <div class="mb-3">
-                <label for="exampleFormControlTextarea1" class="form-label " style="padding-top: 2em;"></label>
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="10" placeholder="Blog content..."
-                    style=" font-size: 20px;"></textarea>
-            </div>
-
-            <div class="p-3 md:w-40 " style="float: right;">
-                <div
-                    class="flex items-center p-3 bg-red-300 rounded-lg shadow-xs cursor-pointer hover:bg-red-500 hover:text-gray-100">
-                    <div>
-                        <p class=" text-xl-center font-medium ml-2 " style="padding-right: 20px; ">
-                            SUBMIT
-                        </p>
-                    </div>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                        <path fill="currentcolor" d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"></path>
-                    </svg>
+                <div class="mb-3">
+                    <label for="exampleFormControlTextarea1" class="form-label " style="padding-top: 2em;"></label>
+                    <textarea class="form-control" name="exampleFormControlTextarea1" id="exampleFormControlTextarea1"
+                        rows="10" placeholder="Blog content..." style=" font-size: 20px;" required></textarea>
                 </div>
-            </div>
+
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
 
         </div>
     </div>
