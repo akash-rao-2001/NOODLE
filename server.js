@@ -98,7 +98,7 @@ app.post('/blog', async (req, res) => {
     })
     try {
         article = await article.save()
-        res.redirect(`/blog/`)
+        res.redirect(`/blog`)
     } catch (e) {
         res.render('404')
     }
