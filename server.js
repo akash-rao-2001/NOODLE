@@ -78,20 +78,20 @@ app.get('/about', (req, res) => {
 })
 
 //test 
-app.get('/blog', async (req, res) => {
+app.get('/blog', async(req, res) => {
     const articles = await Article.find().sort({ createdAt: 'desc' })
     res.render('blog', { articles: articles })
 })
 
 
 
-app.get('/blog/:id', async (req, res) => {
+app.get('/blog/:id', async(req, res) => {
     const article = await Article.findById(req.params.id)
     if (article == null) res.redirect('/')
     res.render('show', { article: article })
 })
 
-app.post('/blog', async (req, res) => {
+app.post('/blog', async(req, res) => {
     let article = new Article({
         title: req.body.title,
         description: req.body.exampleFormControlTextarea1
@@ -106,7 +106,7 @@ app.post('/blog', async (req, res) => {
 
 
 
-app.get('/404', (req, res) => {
+app.get('/*', (req, res) => {
     res.render('404')
 })
 

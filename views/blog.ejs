@@ -6,8 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog Page</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
     <style>
         section {
@@ -38,24 +37,22 @@
     <!--nav-->
     <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #ffffff;padding-left: 400px;">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="/home">
                 <img src="img/noodle.png" class="image2" width="100" height="40" />
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="home">Home</a>
+                        <a class="nav-link" aria-current="page" href="/home">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="about">About</a>
+                        <a class="nav-link" href="/about">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="blog">Blog</a>
+                        <a class="nav-link active" href="/blog">Blog</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Event</a>
@@ -86,8 +83,7 @@
 
                 <% articles.forEach(article=> { %>
                     <div class="p-4 lg:w-1/3">
-                        <div
-                            class="h-full bg-gray-100 bg-opacity-75 px-8 pt-16 pb-24 rounded-lg overflow-hidden text-center relative">
+                        <div class="h-full bg-gray-100 bg-opacity-75 px-8 pt-16 pb-24 rounded-lg overflow-hidden text-center relative">
                             <h2 class="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">
                                 <%= article.createdAt.toLocaleDateString() %>
                             </h2>
@@ -98,8 +94,7 @@
                                 <%= article.description.slice(0,150) %>
                             </p>
 
-                            <div
-                                class="text-center mt-2 leading-none flex justify-center absolute bottom-0 left-0 w-full py-4">
+                            <div class="text-center mt-2 leading-none flex justify-center absolute bottom-0 left-0 w-full py-4">
 
 
                                 <a href="blog/<%= article.id %>" class="btn btn-primary">Read More</a>
@@ -112,10 +107,22 @@
             </div>
         </div>
     </section>
+    <footer class="text-gray-600 body-font" style="background-color: black;padding: 40px;">
+        <h2 style="padding-left: 30%;padding-top: 2%;font-family: 'Lucida Console', 'Courier New', 'monospace;';font-size: 30px;color: white"><strong><big>Follow & Show some love <span style='font-size:40px;'>&#128150;</span></big></strong></h2>
+        <section id="lab_social_icon_footer" style="padding-left: 1px;background-color:black">
+            <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+            <div class="container" style="background-color:black">
+                <div class="text-center center-block" style="background-color:black">
+                    <a href="https://www.facebook.com/amogha.maiya.7"><i id="social-fb" class="fa fa-facebook-square fa-3x social"></i></a>
+                    <a href="https://twitter.com/amogha_maiya"><i id="social-tw" class="fa fa-twitter-square fa-3x social"></i></a>
+                    <a href="https://www.amoghamayya.in"><i id="social-gp" class="fa fa-google-plus-square fa-3x social"></i></a>
+                    <a href="mailto:4nm19cs019@nmamit.in"><i id="social-em" class="fa fa-envelope-square fa-3x social"></i></a>
+                </div>
+            </div>
+        </section>
+    </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-kQtW33rZJAHjgefvhyyzcGF3C5TFyBQBA13V1RKPf4uH+bwyzQxZ6CmMZHmNBEfJ"
-        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-kQtW33rZJAHjgefvhyyzcGF3C5TFyBQBA13V1RKPf4uH+bwyzQxZ6CmMZHmNBEfJ" crossorigin="anonymous"></script>
 </body>
 
 </html>
