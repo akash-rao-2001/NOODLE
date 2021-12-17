@@ -114,7 +114,9 @@ app.get('/event', async (req, res) => {
     }]
     res.render('event', { events: events })
 })
-
+app.get('/event/new', (req, res) => {
+    res.render('eform');
+})
 app.get('/*', (req, res) => {
     res.render('404')
 })
