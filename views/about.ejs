@@ -8,73 +8,156 @@
     <title></title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="">
+    <link href="css/home_style.css">
+
     <style>
         #lab_social_icon_footer {
-            padding: 40px 0;
-            background-color: peachpuff;
+            background-color: #000;
+            text-align: center;
         }
-        
+
         #lab_social_icon_footer a {
-            color: black;
+            color: grey;
         }
-        
+
         #lab_social_icon_footer #social-fb:hover {
             color: #3B5998;
         }
-        
+
         #lab_social_icon_footer #social-tw:hover {
             color: #4099FF;
         }
-        
+
         #lab_social_icon_footer #social-gp:hover {
             color: #d34836;
         }
-        
+
         #lab_social_icon_footer #social-em:hover {
             color: #f39c12;
         }
     </style>
+    <link rel="stylesheet" href="https://unpkg.com/tailwindcss/dist/tailwind.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet">
+    <link href="/public/css/home_style.css">
 </head>
 
-<body style="background-color: peachpuff;">
-    <h1 style="padding-left: 20%;padding-top: 2%;font-family: 'Lucida Console', 'Courier New', 'monospace;';color: whitesmoke;font-size: 40px;"><strong><big><b>Noodle Infotainment Website  <span style='font-size:60px;'>&#x1F4E3;</span></b></big></strong></h1>
-    <h2 style="padding-left: 34%;padding-top: 2%;font-family: 'Lucida Console', 'Courier New', 'monospace;';font-size: 30px;color:darkslategray"><strong><big>About the Project! <span style='font-size:50px;'>&#128187;</span></big></strong></h2>
+<body style="background-color: #ffcb99;">
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #fff;padding-left: 400px;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/home">
+                <img src="img/noodle.png" class="image2" width="100" height="40" />
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="/home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/blog">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/event">Event</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/contact">Contact</a>
+                    </li>
+                    <!-- <li class="nav-item">
+                        <a class="nav-link disabled">demo</a>
+                    </li> -->
+                </ul>
+                <form class="d-flex">
+                </form>
+            </div>
+            <button onclick="window.location.href='form';" class="btn btn-outline-warning image2" type="submit">Submit
+                Blog</button>
+        </div>
+    </nav>
+    <h1
+        style="padding-left: 20%;padding-top: 2%;font-family: 'Lucida Console', 'Courier New', 'monospace;';color: whitesmoke;font-size: 40px;">
+        <strong><big><b>Noodle Infotainment Website <span style='font-size:60px;'>&#x1F4E3;</span></b></big></strong>
+    </h1>
+    <h2
+        style="padding-left: 34%;padding-top: 2%;font-family: 'Lucida Console', 'Courier New', 'monospace;';font-size: 30px;color:darkslategray">
+        <strong><big>About the Project! <span style='font-size:50px;'>&#128187;</span></big></strong>
+    </h2>
     <div style="padding-left: 4%;padding-right: 4%;">
-        <h3 style="padding-top:3%;font-family: 'Lucida Console', 'Courier New', 'monospace;';line-height: 170%;">Noodle Infotainment is a full fledged Information & Entertainment Web Application exclusively for NMAMITians!.The web Application allows Users to get all the information about the college and its events all in one place!</h3>
-        <h3 style="padding-top:1%;font-family: 'Lucida Console', 'Courier New', 'monospace;';line-height: 170%;">The Web app asks for sign in/sign up for every user where the users data is stored in data base.Users can request to post a blog in blogs section by filling up a form.Users can see various events occuring in the college!</h3>
-        <h3 style="padding-top:1%;font-family: 'Lucida Console', 'Courier New', 'monospace;';line-height: 170%;">Students can view or put thier resume or projects in thier customized dashboard similar to linked in and can see others projects/resume.Students can access all the blogs written by other users and can create thier own content and put it in the
+        <h3 style="padding-top:3%;font-family: 'Lucida Console', 'Courier New', 'monospace;';line-height: 170%;">Noodle
+            Infotainment is a full fledged Information & Entertainment Web Application exclusively for NMAMITians!.The
+            web Application allows Users to get all the information about the college and its events all in one place!
+        </h3>
+        <h3 style="padding-top:1%;font-family: 'Lucida Console', 'Courier New', 'monospace;';line-height: 170%;">The Web
+            app asks for sign in/sign up for every user where the users data is stored in data base.Users can request to
+            post a blog in blogs section by filling up a form.Users can see various events occuring in the college!</h3>
+        <h3 style="padding-top:1%;font-family: 'Lucida Console', 'Courier New', 'monospace;';line-height: 170%;">
+            Students can view or put thier resume or projects in thier customized dashboard similar to linked in and can
+            see others projects/resume.Students can access all the blogs written by other users and can create thier own
+            content and put it in the
             webApp
         </h3>
-        <h3 style="padding-top:1%;font-family: 'Lucida Console', 'Courier New', 'monospace;';line-height: 170%;">The Web app asks for sign in/sign up for every user where the users data is stored in data base.Users can request to post a blog in blogs section by filling up a form.Users can see various events occuring in the college.</h3>
+        <h3 style="padding-top:1%;font-family: 'Lucida Console', 'Courier New', 'monospace;';line-height: 170%;">The Web
+            app asks for sign in/sign up for every user where the users data is stored in data base.Users can request to
+            post a blog in blogs section by filling up a form.Users can see various events occuring in the college.</h3>
     </div>
+    <br><br><br>
     <div>
-        <h2 style="padding-left: 37%;padding-top: 2%;font-family: 'Lucida Console', 'Courier New', 'monospace;';font-size: 30px;color: darkslategray"><strong><big>About the Team!  <span style='font-size:50px;'>&#129333;</span></big></strong></h2>
-        <img src="/img/amogha.png" style="width: 350px;height:350px;padding-left: 360px;padding-top: 75px;">
-        <img src="/img/akash.png" style="width: 350px;height:350px;padding-left: 100px;padding-top: 75px;">
+        <h2
+            style="padding-left: 37%;padding-top: 2%;font-family: 'Lucida Console', 'Courier New', 'monospace;';font-size: 30px;color: darkslategray">
+            <strong><big>About the Team! <span style='font-size:50px;'>&#129333;</span></big></strong>
+        </h2>
     </div>
     <div style="padding-left: 4%;padding-right: 4%;">
-        <h3 style="padding-top:3%;font-family: 'Lucida Console', 'Courier New', 'monospace;';line-height: 170%;">I and akash are 3rd year students of NMAMIT,nitte.Akash is a web enthusiast from Mangalore and Amogha is AI enthusiast from Udupi.</h3>
-        <h3 style="padding-top:1%;font-family: 'Lucida Console', 'Courier New', 'monospace;';line-height: 170%;">We both are dayscholars and have a good friendship between us.He is currently learning technologies like html,css,javascript and frameworks like laravel.</h3>
-        <h3 style="padding-top:1%;font-family: 'Lucida Console', 'Courier New', 'monospace;';line-height: 170%;">Amogha is currently into artificial neural networks and have been learning python since 1 year. he is also into web application developement involving frontend part mainly UI/Ux of the website.
+        <h3 style="padding-top:3%;font-family: 'Lucida Console', 'Courier New', 'monospace;';line-height: 170%;">I and
+            akash are 3rd year students of NMAMIT,nitte.Akash is a web enthusiast from Mangalore and Amogha is AI
+            enthusiast from Udupi.</h3>
+        <h3 style="padding-top:1%;font-family: 'Lucida Console', 'Courier New', 'monospace;';line-height: 170%;">We both
+            are dayscholars and have a good friendship between us.He is currently learning technologies like
+            html,css,javascript and frameworks like laravel.</h3>
+        <h3 style="padding-top:1%;font-family: 'Lucida Console', 'Courier New', 'monospace;';line-height: 170%;">Amogha
+            is currently into artificial neural networks and have been learning python since 1 year. he is also into web
+            application developement involving frontend part mainly UI/Ux of the website.
         </h3>
-        <h3 style="padding-top:1%;font-family: 'Lucida Console', 'Courier New', 'monospace;';line-height: 170%;">The Web app asks for sign in/sign up for every user where the users data is stored in data base.Users can request to post a blog in blogs section by filling up a form.Users can see various events occuring in the college.</h3>
+        <h3 style="padding-top:1%;font-family: 'Lucida Console', 'Courier New', 'monospace;';line-height: 170%;">The Web
+            app asks for sign in/sign up for every user where the users data is stored in data base.Users can request to
+            post a blog in blogs section by filling up a form.Users can see various events occuring in the college.</h3>
+        <img src="/img/amogha.png"
+            style="width: 320px;height:300px;padding-left: 100px;padding-top: 75px; margin-left: 300px;">
+        <img src="/img/akash.png" style="width: 320px;height:300px;padding-left: 100px;padding-top: 75px;">
     </div>
     <br>
     <br>
     <br>
-    <h2 style="padding-left: 30%;padding-top: 2%;font-family: 'Lucida Console', 'Courier New', 'monospace;';font-size: 30px;color: darkslategray"><strong><big>Follow & Show some love <span style='font-size:40px;'>&#128150;</span></big></strong></h2>
-    <section id="lab_social_icon_footer" style="padding-left: 630px;">
-        <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-        <div class="container">
-            <div class="text-center center-block">
-                <a href="https://www.facebook.com/amogha.maiya.7"><i id="social-fb" class="fa fa-facebook-square fa-3x social"></i></a>
-                <a href="https://twitter.com/amogha_maiya"><i id="social-tw" class="fa fa-twitter-square fa-3x social"></i></a>
-                <a href="https://www.amoghamayya.in"><i id="social-gp" class="fa fa-google-plus-square fa-3x social"></i></a>
-                <a href="mailto:4nm19cs019@nmamit.in"><i id="social-em" class="fa fa-envelope-square fa-3x social"></i></a>
+    <footer class="text-gray-600 body-font" style="background-color: black;padding: 40px;">
+        <h2
+            style="padding-left: 30%;padding-top: 2%;font-family: 'Lucida Console', 'Courier New', 'monospace;';font-size: 30px;color: white">
+            <strong><big>Follow & Show some love <span style='font-size:40px;'>&#128150;</span></big></strong>
+        </h2>
+        <section id="lab_social_icon_footer" style="padding-left: 1px;">
+            <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+            <div class="container">
+                <div class="text-center center-block">
+                    <a href="https://www.facebook.com/amogha.maiya.7"><i id="social-fb"
+                            class="fa fa-facebook-square fa-3x social"></i></a>
+                    <a href="https://twitter.com/amogha_maiya"><i id="social-tw"
+                            class="fa fa-twitter-square fa-3x social"></i></a>
+                    <a href="https://www.amoghamayya.in"><i id="social-gp"
+                            class="fa fa-google-plus-square fa-3x social"></i></a>
+                    <a href="mailto:4nm19cs019@nmamit.in"><i id="social-em"
+                            class="fa fa-envelope-square fa-3x social"></i></a>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </footer>
+
 
     <script src="" async defer></script>
 </body>

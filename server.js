@@ -103,10 +103,15 @@ app.post('/blog', async (req, res) => {
         res.render('404')
     }
 })
+app.get('/contact', (req, res) => {
+    res.render('contact');
+})
 
+app.get('/event', async (req, res) => {
+    res.render('event')
+})
 
-
-app.get('/404', (req, res) => {
+app.get('/*', (req, res) => {
     res.render('404')
 })
 

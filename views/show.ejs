@@ -1,5 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+<style>
+    button {
+        width: 48px;
+        height: 48px;
+        background-color: #fff;
+        border-radius: 48px;
+        border: 2px solid #f2af29;
+        transition: all 0.3s ease;
+    }
+    
+    button::after {
+        content: "\279C";
+        font-size: 18px;
+        color: #f2af29;
+        transition: all 0.3s ease;
+    }
+    
+    button:hover {
+        border-color: #14519f;
+    }
+    
+    button:hover::after {
+        color: #14519f;
+    }
+</style>
 
 <head>
     <meta charset="UTF-8">
@@ -8,16 +33,18 @@
     <title>Document</title>
 </head>
 
-<body>
-    <h1>
+<body style="background-color: #ffcb99;">
+    <h1 style="color: white;text-align: center;font-size: 50px;">
         <%= article.title %>
     </h1>
-    <div>
+    <div style="color: black;font-size: 25px;">
+        Date:
         <%= article.createdAt.toLocaleDateString() %>
     </div>
-    <div>
+    <div style="color: black;font-size: 30px;"><br><br> Blog:<br>
         <%= article.description %>
     </div>
+    <button></button>
 </body>
 
 </html>
