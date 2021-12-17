@@ -1,7 +1,9 @@
 const express = require('express')
 const Article = require('./models/article')
+const Event = require('./models/event')
 const mongoose = require('mongoose')
 var bodyParser = require("body-parser")
+const { events } = require('./models/article')
 const app = express();
 
 app.use(bodyParser.json())
@@ -108,15 +110,31 @@ app.get('/contact', (req, res) => {
 })
 
 app.get('/event', async (req, res) => {
-    const events = [{
-        title: 'test',
-        description: 'dummy'
-    }]
+    const events = await Event.find().sort({ createdAt: 'desc' })
+
     res.render('event', { events: events })
 })
 app.get('/event/new', (req, res) => {
     res.render('eform');
 })
+app.post('/event', async (req, res) => {
+    // const events = [{
+    //     title: 'test',
+    //     description: 'dummy'
+    // }]
+    // res.render('event', { events: events })
+    let event = new Event({
+        title: req.body.title,
+        description: req.body.exampleFormControlTextarea1
+    })
+    try {
+        event = await event.save()
+        res.redirect(`/event`)
+    } catch (e) {
+        res.render('404')
+    }
+})
+
 app.get('/*', (req, res) => {
     res.render('404')
 })
