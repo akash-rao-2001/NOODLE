@@ -9,38 +9,36 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://unpkg.com/tailwindcss/dist/tailwind.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet">
     <link href="/public/css/home_style.css">
     <script src="">
         const submitBtn = document.querySelector('#submit');
 
-        submitBtn.addEventListener("click", function (event) {
+        submitBtn.addEventListener("click", function(event) {
             event.preventDefault()
         });
     </script>
     <style>
         @import url("https://fonts.googleapis.com/css?family=Raleway:200,300,400,700&display=swap");
-
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-
+        
         body {
             background-color: aqua;
             font-family: "Raleway", sans-serif;
         }
-
+        
         section {
             padding: 5rem 10px;
             background-color: #fff;
             background-image: linear-gradient(170deg, floralwhite, floralwhite 50%, #ffcb99 50%, #ffcb99 100%);
             background-position: center center;
         }
-
+        
         .form-box {
             width: 100%;
             max-width: 500px;
@@ -51,18 +49,18 @@
             border: 1px solid #007575;
             box-shadow: 1px 1px 3px dimgrey, 3px 3px 7px grey;
         }
-
+        
         h2 {
             text-transform: uppercase;
             margin-bottom: 0.7rem;
             font-size: 2rem;
             font-weight: 300;
         }
-
+        
         .form-item {
             margin-bottom: 0.7rem;
         }
-
+        
         label,
         input,
         textarea {
@@ -72,18 +70,18 @@
             line-height: 1.4;
             outline-color: p;
         }
-
+        
         label {
             margin-bottom: 3px;
         }
-
+        
         input,
         textarea {
             padding: 3px;
             border: 1px solid #ffcb99;
             background-color: rgba(250, 250, 250, 0.85);
         }
-
+        
         input[type=submit] {
             background-color: #ffcb99;
             padding: 7px;
@@ -92,36 +90,33 @@
             cursor: pointer;
             text-transform: uppercase;
         }
-
+        
         input[type=submit]:hover {
             animation-name: submit-hover;
             animation-duration: 0.7s;
         }
-
+        
         input[type=submit]:active {
             animation-name: submit-active;
             animation-duration: 0.3s;
         }
-
+        
         @keyframes submit-hover {
             0% {
                 transform: scale(1);
             }
-
             50% {
                 transform: scale(1.02);
             }
-
             100% {
                 transform: scale(1);
             }
         }
-
+        
         @keyframes submit-active {
             0% {
                 transform: scale(1);
             }
-
             100% {
                 transform: scale(0.98);
             }
@@ -135,9 +130,7 @@
             <a class="navbar-brand" href="/home">
                 <img src="img/noodle.png" class="image2" width="100" height="40" />
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -171,7 +164,7 @@
     <section class="contact">
         <div class="form-box">
             <h2>Contact Us</h2>
-            <form action="">
+            <form method="get" action="/contact">
                 <div class="form-item">
                     <label for="name">Your name:</label>
                     <input type="text" name="name" id="name">
@@ -181,15 +174,39 @@
                     <input type="email" name="email" id="email">
                 </div>
                 <div class="form-item">
-                    <label for="message">Your message:</label>
-                    <textarea name="message" id="message" cols="30" rows="7"></textarea>
+                    <label for="message">subject:</label>
+                    <textarea name="message1" id="message1" cols="30" rows="1"></textarea>
                 </div>
                 <div class="form-item">
-                    <input type="submit" value="Submit" id="submit">
+                    <label for="message">Your message:</label>
+                    <textarea name="message" id="message" cols="30" rows="4"></textarea>
+                </div>
+                <div class="form-item">
+                    <input type="submit" value="Submit" id="submit" onclick="hello_world()">
                 </div>
             </form>
+
         </div>
     </section>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+        function hello_world() {
+            var inputVal = document.getElementById("message1").value;
+            var inputMes = document.getElementById("message").value;
+            Email.send({
+                    Host: "smtp.gmail.com",
+                    Username: "noodlenmamit@gmail.com",
+                    Password: "noodlenitte@123",
+                    To: '4nm19cs019@nmamit.in',
+                    From: "noodlenmamit@gmail.com",
+                    Subject: inputVal,
+                    Body: inputMes,
+                })
+                .then(function(message) {
+                    alert("mail sent successfully")
+                });
+        }
+    </script>
 </body>
 
 </html>
