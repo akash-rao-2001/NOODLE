@@ -95,28 +95,33 @@
             </div>
         </div>
 
-        <br>
-        <br>
+        <% events.forEach(events=> { %>
+            <br>
+            <br>
 
-        <div class="card text-center" style="width: 80%; margin-left: 10%;">
-            <div class="card-header" style="font-size: larger;font-weight: bold; background-color: #faeba9;">
-                Featured
-            </div>
-            <div class="card-body" style="background-color: #f8dec4;">
-                <h5 class="card-title">Special title treatment</h5>
-                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-            </div>
-        </div>
-
-
-
-        <div class="container px-5 py-20 mx-auto">
-            <div class="flex flex-wrap -m-4">
-                <div class="d-grid gap-2 col-10 mx-auto btn-group-lg">
-                    <button class="btn btn-outline-secondary" type="button">Create Event</button>
+            <div class="card text-center" style="width: 80%; margin-left: 10%;">
+                <div class="card-header" style="font-size: larger;font-weight: bold; background-color: #faeba9;">
+                    <%= events.title %>
+                </div>
+                <div class="card-body" style="background-color: #f8dec4;">
+                    <p class="card-text">
+                        <%= events.description %>
+                    </p>
                 </div>
             </div>
-        </div>
+            <% }) %>
+
+
+
+                <div class="container px-5 py-20 mx-auto">
+                    <div class="flex flex-wrap -m-4">
+                        <div class="d-grid gap-2 col-10 mx-auto btn-group-lg">
+                            <button onclick="location.href='/event/new'" class="btn btn-outline-secondary"
+                                type="button">Create
+                                Event</button>
+                        </div>
+                    </div>
+                </div>
 
     </section>
     <footer class="text-gray-600 body-font" style="background-color: black;padding: 40px;">

@@ -108,7 +108,11 @@ app.get('/contact', (req, res) => {
 })
 
 app.get('/event', async (req, res) => {
-    res.render('event')
+    const events = [{
+        title: 'test',
+        description: 'dummy'
+    }]
+    res.render('event', { events: events })
 })
 
 app.get('/*', (req, res) => {
