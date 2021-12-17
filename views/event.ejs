@@ -115,13 +115,18 @@
 
                 <div class="container px-5 py-20 mx-auto">
                     <div class="flex flex-wrap -m-4">
-                        <div class="d-grid gap-2 col-10 mx-auto btn-group-lg">
-                            <button onclick="location.href='/event/new'" class="btn btn-outline-secondary"
-                                type="button">Create
-                                Event</button>
+                        <div class="d-grid gap-2 col-10 mx-auto btn-group-lg" id="disp">
+                            <!-- <button onclick="location.href='/event/new'" class="btn btn-outline-secondary"
+                                type="button"></button> -->
                         </div>
                     </div>
                 </div>
+                <script>
+                    // document.getElementById("disp").innerHTML = "Create Event"
+                    console.log("<%= name %>")
+                    if ("<%= name %>" == "admin")
+                        document.getElementById("disp").innerHTML = "<button onclick=\"location.href='/event/new'\" class=\"btn btn-outline-secondary\" type=\"button\" id=\"disp\">CREATE EVENT</button>"
+                </script>
 
     </section>
     <footer class="text-gray-600 body-font" style="background-color: black;padding: 40px;">

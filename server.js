@@ -37,7 +37,6 @@ app.set('view engine', 'ejs')
 app.get('', (req, res) => {
     res.render('index')
 })
-
 app.post("", (req, res) => {
     var name = req.body.name;
     var email = req.body.email;
@@ -51,6 +50,7 @@ app.post("", (req, res) => {
         "password": password
     }
     app.locals.name = name;
+    global.gname = name
     db.collection('users').insertOne(data, (err, collection) => {
         if (err) {
             throw err;
@@ -112,9 +112,12 @@ app.get('/contact', (req, res) => {
 app.get('/event', async (req, res) => {
     const events = await Event.find().sort({ createdAt: 'desc' })
 
-    res.render('event', { events: events })
+    // const name = await Article.find().sort({ createdAt: 'desc' }).limit(1)
+
+    res.render('event', { events: events, name: gname })
 })
 app.get('/event/new', (req, res) => {
+
     res.render('eform');
 })
 app.post('/event', async (req, res) => {
